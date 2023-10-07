@@ -1,11 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// need to replace Switch with Routes also for <Switch> bwlow with <Routes>
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const routes = [ ];
 
-export const Routes = () => (
+//Changed Routes to Routes01 because it conflicts with new node module Routes
+export const Routes01 = () => ( 
     <Router>
-        <Switch>
+        <Routes>
             {routes.map((route, index) => (
                     <Route 
                         key={index}
@@ -15,6 +17,6 @@ export const Routes = () => (
                         <route.Component />
                     </Route>
                 ))}
-        </Switch>
+        </Routes>
     </Router>
 )
